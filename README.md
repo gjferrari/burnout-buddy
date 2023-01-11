@@ -1,1 +1,1 @@
-# burnoutbuddy
+# BurnOutBuddy
