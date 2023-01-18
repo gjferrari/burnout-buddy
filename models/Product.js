@@ -15,16 +15,26 @@ Product.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    product_content: {
+    product_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+
+    product_content: {
+      type: DataTypes.JSON,
+      allowNull: false,
+    },
+    product_link: {
+      type: DataTypes.JSON,
+      allowNull: false,
+      validate: {
+        isUrl: true,
+      },
+    },
+    //IS THERE A DATATYPE FOR LINKS?
     time: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isDecimal: true,
-      },
     },
     category_id: {
       type: DataTypes.INTEGER,
