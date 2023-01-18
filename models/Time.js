@@ -25,4 +25,4 @@ Time.init(
   }
 );
 
-module.exports = Tag;
+module.exports = Time;
