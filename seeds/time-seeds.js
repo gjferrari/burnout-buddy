@@ -18,6 +18,6 @@ const timeData = [
   },
 ];
 
-const seedTags = () => Tag.bulkCreate(tagData);
+const seedTime = () => Time.bulkCreate(timeData);
 
-module.exports = seedTags;
+module.exports = seedTime;
