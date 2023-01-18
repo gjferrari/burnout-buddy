@@ -12,7 +12,7 @@ Time.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    time_name: {
+    time_amount: {
       type: DataTypes.STRING,
     },
   },
