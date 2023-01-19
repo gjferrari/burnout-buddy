@@ -19,12 +19,22 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+
+    product_content: {
+      type: DataTypes.JSON,
+      allowNull: false,
+    },
+    product_link: {
+      type: DataTypes.JSON,
+      allowNull: false,
+      validate: {
+        isUrl: true,
+      },
+    },
+    //IS THERE A DATATYPE FOR LINKS?
     time: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isDecimal: true,
-      },
     },
     category_id: {
       type: DataTypes.INTEGER,
