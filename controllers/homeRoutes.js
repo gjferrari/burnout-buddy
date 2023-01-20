@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     const dbCategoryData = await Category.findAll({
       include: [
         {
-          model: Category,
+          // model: Category,
           attributes: ['filename', 'description'],
         },
       ],
