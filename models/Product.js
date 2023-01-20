@@ -1,7 +1,7 @@
 // import important parts of sequelize library
 const { Model, Product } = require("sequelize");
 // import our database connection from config.js
-const sequelize = require("../config/connection");
+const sequelize = require("../config/connection.js");
 
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
@@ -19,25 +19,30 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-
     product_content: {
-      type: DataTypes.JSON,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     product_link: {
-      type: DataTypes.JSON,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         isUrl: true,
       },
     },
     //IS THERE A DATATYPE FOR LINKS?
-    time: {
+    time_id: {
       type: DataTypes.STRING,
       allowNull: false,
+      references: {
+        model: "time",
+        key: "id",
+        unique: false,
+      },
     },
     category_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: "category",
         key: "id",
