@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Time, Product } = require('../models');
+const { Category, Product } = require('../models');
 
 // GET all models for homepage
 router.get('/', async (req, res) => {
