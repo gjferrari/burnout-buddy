@@ -7,6 +7,10 @@
     --greenish: rgba(207,227,226);
 }
 
+#main{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 #btn {
     background-color: var(--greenish);
     color: var(--dark-blue);
