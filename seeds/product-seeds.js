@@ -9,6 +9,7 @@ const productData = [
     product_link:
       "https://www.bing.com/videos/search?q=box+breathing+technique&&view=detail&mid=239E803326A1B5468D96239E803326A1B5468D96&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dbox%2Bbreathing%2Btechnique%26FORM%3DHDRSC3",
     category_id: 1,
+    time_id:1,
   },
 
   {
@@ -18,6 +19,7 @@ const productData = [
     product_link:
       "https://www.psychologytoday.com/us/blog/close-communication/202205/4-significant-physical-benefits-hugging",
     category_id: 2,
+    time_id:1,
   },
 
   {
@@ -27,12 +29,14 @@ const productData = [
     product_link:
       "https://www.forbes.com/sites/amymorin/2014/11/23/7-scientifically-proven-benefits-of-gratitude-that-will-motivate-you-to-give-thanks-year-round/?sh=501872e3183c",
     category_id: 3,
+    time_id:1,
   },
   {
     product_name: "Play with a Pet",
     product_content: "Share encouragement, Play with a toy, Pet gently",
     product_link: "https://www.petfinder.com/",
     category_id: 4,
+    time_id:1,
   },
 
   {
@@ -42,6 +46,7 @@ const productData = [
     product_link:
       "https://writingprocess.mit.edu/process/step-1-generate-ideas/instructions/freewriting",
     category_id: 5,
+    time_id:1,
   },
   {
     product_name: "Light a candle or put on twinkle lights",
@@ -50,6 +55,7 @@ const productData = [
     product_link:
       "https://homesick.com/blogs/news/14-calming-scents-to-help-you-unwind",
     category_id: 6,
+    time_id:1,
   },
   //10 minutes
   {
@@ -58,6 +64,7 @@ const productData = [
     product_link:
       "https://www.psychologytoday.com/us/blog/smart-relationships/201403/affirmations-the-why-what-how-and-what-if",
     category_id: 1,
+    time_id:2,
   },
   {
     product_name: "Desk Stretch",
@@ -66,12 +73,14 @@ const productData = [
     product_link:
       "https://www.mayoclinic.org/healthy-lifestyle/adult-health/multimedia/stretching/sls-20076525",
     category_id: 2,
+    time_id:2,
   },
   {
     product_name: "Schedule a haircut  nails etc.",
     product_content: "Many hairdressers and barber shops are closed on Mondays",
     product_link: "https://www.beautybar-inc.com/news/6-benefits-pedicure",
     category_id: 3,
+    time_id:2,
   },
   {
     product_name: "Listen to a TED talk",
@@ -79,6 +88,7 @@ const productData = [
       "“TED is on a mission to discover and spread ideas that spark imagination, embrace possibility and catalyze impact.”",
     product_link: "https://www.ted.com/talks?sort=newest&duration=6-12",
     category_id: 4,
+    time_id:2,
   },
   {
     product_name: "Drawing/Coloring",
@@ -87,6 +97,7 @@ const productData = [
     product_link:
       "https://www.barnesandnoble.com/w/the-mindfulness-coloring-book-emma-farrarons/1141127905",
     category_id: 5,
+    time_id:2,
   },
   {
     product_name: "Put head down on table or desk",
@@ -94,6 +105,7 @@ const productData = [
       "“A short nap in the mid-afternoon can boost memory, improve job performance, left your mood, make you more alert, and ease stress” - webMD ",
     product_link: "https://www.youtube.com/watch?v=7cd5nBMsfZo",
     category_id: 6,
+    time_id:2,
   },
   {
     product_name: "Sit outside or near a window ",
@@ -101,6 +113,7 @@ const productData = [
       "Find a comfortable seat or stance,enjoy a coffee tea or water, set an intention to be present. A 2018 study at Cornell University found that natural light from a window reduced eye strain, headaches and drowsiness",
     product_link: "",
     category_id: 1,
+    time_id:2,
   },
   {
     product_name: "Tidy a space in office/ home",
@@ -108,6 +121,7 @@ const productData = [
       "Pick an area to tidy up. Put on a playlist, remove clutter. Don’t worry about re organizing, just a tidy up. Set a timer for 10 minutes.",
     product_link: "https://www.youtube.com/watch?v=5YiiJjl1Nf0",
     category_id: 2,
+    time_id:2,
   },
   {
     product_name: "Send a positive email to a business you appreciate",
@@ -116,6 +130,7 @@ const productData = [
     product_link:
       "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier#:~:text=In%20positive%20psychology%20research%2C%20gratitude,adversity%2C%20and%20build%20strong%20relationships.",
     category_id: 3,
+    time_id:2,
   },
   {
     product_name:
@@ -125,6 +140,7 @@ const productData = [
     product_link:
       "https://www.apartmenttherapy.com/mental-health-benefits-decluttering-36948599",
     category_id: 4,
+    time_id:2,
   },
   {
     product_name: "Pack/make a homemade lunch or grocery list",
@@ -132,6 +148,7 @@ const productData = [
     product_link:
       "https://www.eatingwell.com/gallery/7965827/10-minute-easy-lunch-ideas/",
     category_id: 5,
+    time_id:2,
   },
   {
     product_name:
@@ -141,6 +158,7 @@ const productData = [
     product_link:
       "“Place a blanket or towel on the floor, lie down with trunk near the wall, place legs up against the wall, feel the stretch, breathe easy, come out of the pose slowly”",
     category_id: 6,
+    time_id:2,
   },
   //15 minutes
   {
@@ -150,6 +168,7 @@ const productData = [
     product_link:
       "https://www.calm.com/?pid=googleadwords_int&af_channel=googlesem&af_c_id=14668023573&af_adset_id=136070396085&af_ad_id=603377958424&af_siteid=g&af_sub_siteid=&af_keyword=kwd-609879535395&af_sub3=c&af_sub4=Cj0KCQiAq5meBhCyARIsAJrtdr7V06wR1e8Fcv6eci1MZNt3w--E2yzDIQ8VWPMT_i6FoAffKNdfj0EaAkHGEALw_wcB&utm_medium=paid&utm_source=googlesem&utm_campaign=14668023573&utm_content=homepage&utm_term=kwd-609879535395&gclid=Cj0KCQiAq5meBhCyARIsAJrtdr7V06wR1e8Fcv6eci1MZNt3w--E2yzDIQ8VWPMT_i6FoAffKNdfj0EaAkHGEALw_wcB",
     category_id: 1,
+    time_id:3,
   },
   {
     product_name: "Go for a walk or run",
@@ -158,6 +177,7 @@ const productData = [
     product_link:
       "https://www.dailyom.com/journal/how-to-practice-walking-meditation/?aff=91&ad=1&utm_source=google&utm_medium=ppc&utm_campaign=PerformanceMax&acct=9358138875&campaign_id=16896613381&gclid=Cj0KCQiAq5meBhCyARIsAJrtdr4JEFcVC95xD1Gp-QfUlRD1kuLmOaaPa6uJvVEw9DvN_mXO9fnPBoIaAluTEALw_wcB",
     category_id: 2,
+    time_id:3,
   },
   {
     product_name: "Write a postcard",
@@ -166,6 +186,7 @@ const productData = [
     product_link:
       "https://www.uspoststamp.com/product-category/postcard/?per_page=24&stock_status=instock",
     category_id: 3,
+    time_id:3,
   },
   {
     product_name: "Learn or continue language learning",
@@ -174,6 +195,7 @@ const productData = [
     product_link:
       "https://try.babbel.com/flags-sem-brand-desktop/?bsc=bsbr_eng_us_ex&btp=default&msclkid=8c652fc90314181d2f484c0e2eb05f5a&utm_campaign=BG_BR_SRH_ct_ENGALL_gEN_cUS_ex&utm_content=141652795_4029890148_kwd-29465008160%3Aloc-190_80127039133412&utm_medium=cpc&utm_source=bing&utm_term=babbel+languages",
     category_id: 4,
+    time_id:3,
   },
   {
     product_name: "Play or create music",
@@ -181,6 +203,7 @@ const productData = [
       "“Playing and learning an instrument can increase cognitive ability, confidence, patience and memory”",
     product_link: "https://open.spotify.com/playlist/37i9dQZF1DX1s9knjP51Oa",
     category_id: 5,
+    time_id:3,
   },
   {
     product_name: "Change into comfortable clothes",
@@ -189,6 +212,7 @@ const productData = [
     product_link:
       "https://oldnavy.gap.com/browse/product.do?pid=474324052&cid=3014636&pcid=1189220&vid=1&nav=meganav%3AFamily%20Outfits%3AFamily%20Outfits%3AFamily%20Pajamas#pdp-page-content",
     category_id: 6,
+    time_id:3,
   },
   {
     product_name: "Drink 8-12 oz  water",
@@ -197,6 +221,7 @@ const productData = [
     product_link:
       "https://health.clevelandclinic.org/cold-water-vs-warm-water/",
     category_id: 1,
+    time_id:3,
   },
   {
     product_name: "At home dance party",
@@ -204,6 +229,7 @@ const productData = [
       "“Other studies show that dance helps reduce stress, increases levels of the feel-good hormone serotonin, and helps develop new neural connections, especially in regions involved in executive function, long-term memory, and spatial recognition.” - Harvard Medical School ",
     product_link: "https://open.spotify.com/playlist/00zEzm3UcrpCciabJacQLo",
     category_id: 2,
+    time_id:3,
   },
   {
     product_name: "Find a self improvement book through local library",
@@ -212,6 +238,7 @@ const productData = [
     product_link:
       "https://www.spl.org/books-and-media/books-and-ebooks/staff-picks/personal-finance",
     category_id: 3,
+    time_id:3,
   },
   {
     product_name: "Work on a puzzle",
@@ -219,6 +246,7 @@ const productData = [
       "“Word puzzles help to expand your vocabulary, reduce anxiety, retain memory function, and stimulate creativity”",
     product_link: "https://www.nytimes.com/games/wordle/index.html",
     category_id: 4,
+    time_id:3,
   },
   {
     product_name: "Make a simple budget",
@@ -226,6 +254,7 @@ const productData = [
       "“Making a budget allows you to plan and achieve your goals, prepare for emergencies, and make well informed choices”",
     product_link: "https://www.cnbc.com/select/how-to-create-a-budget-guide/",
     category_id: 5,
+    time_id:3,
   },
   {
     product_name: "Assess and take something off your todo list ",
@@ -234,6 +263,7 @@ const productData = [
     product_link:
       "https://www.theguardian.com/lifeandstyle/2017/may/10/the-psychology-of-the-to-do-list-why-your-brain-loves-ordered-tasks",
     category_id: 6,
+    time_id:3,
   },
   //20 minutes
   {
@@ -242,6 +272,7 @@ const productData = [
       "A warm shower or bath can elevate your mood, improve sleep, and relieve muscle pain",
     product_link: "https://health.clevelandclinic.org/reasons-to-take-a-bath/",
     category_id: 1,
+    time_id:4,
   },
   {
     product_name: "Body weight training",
@@ -250,6 +281,7 @@ const productData = [
     product_link:
       "https://www.nerdfitness.com/wp-content/uploads/2021/01/Beginner-Bodyweight-Workout_short-scaled.jpg",
     category_id: 2,
+    time_id:4,
   },
   {
     product_name: "Listen to a self-help podcast",
@@ -258,6 +290,7 @@ const productData = [
     product_link:
       "https://www.pushkin.fm/podcasts/the-happiness-lab-with-dr-laurie-santos",
     category_id: 3,
+    time_id:4,
   },
   {
     product_name: "Listen to a distracting podcast",
@@ -265,6 +298,7 @@ const productData = [
       "“Listening to a fun podcast can help build your credibility of a niche topic, stimulates your mental imagery, and cut down on screen or eye fatigue”",
     product_link: "https://www.alieward.com/ologies",
     category_id: 4,
+    time_id:4,
   },
   {
     product_name: "Baking Cooking Recipe",
@@ -273,6 +307,7 @@ const productData = [
     product_link:
       "https://cooking.nytimes.com/68861692-nyt-cooking/20651790-easy-baking-recipes",
     category_id: 5,
+    time_id:4,
   },
   {
     product_name: "Charge electronics switch out batteries in home",
@@ -280,6 +315,7 @@ const productData = [
       "“Replacing batteries or charging devices preemptively can help prevent stressful situations like alarms beeping at night or a phone dying en route to an important appointment”",
     product_link: "https://www.youtube.com/watch?v=99hrmrs0SPw",
     category_id: 6,
+    time_id:4,
   },
   //30 minutes
   {
@@ -289,6 +325,7 @@ const productData = [
     product_link:
       "https://www.hsph.harvard.edu/nutritionsource/mindful-eating/",
     category_id: 1,
+    time_id:5,
   },
   {
     product_name: "Yoga Class",
@@ -297,6 +334,7 @@ const productData = [
     product_link:
       "https://www.womenshealthmag.com/fitness/g29264172/best-yoga-videos/?utm_source=google&utm_medium=cpc&utm_campaign=arb_ga_whm_md_pmx_us_urlx_17871928004&gclid=Cj0KCQiAq5meBhCyARIsAJrtdr7S0bw6J0j37Za1H1FZTTi-eas2Z8IjBPKfB8ecF2S7jJ6Ro41AM2MaAn75EALw_wcB",
     category_id: 2,
+    time_id:5,
   },
   {
     product_name: "Make a DR. or DDS. appt.",
@@ -305,6 +343,7 @@ const productData = [
     product_link:
       "https://health.clevelandclinic.org/why-you-need-an-annual-physical-and-what-to-expect/",
     category_id: 3,
+    time_id:5,
   },
   {
     product_name: "Read /listen to a fiction book",
@@ -313,6 +352,7 @@ const productData = [
     product_link:
       "https://www.spl.org/books-and-media/books-and-ebooks/staff-picks/best-debut-fiction-of-2022",
     category_id: 4,
+    time_id:5,
   },
   {
     product_name: "Organize your closet or bookshelf  by color",
@@ -321,6 +361,7 @@ const productData = [
     product_link:
       "https://www.itssimplyplaced.com/benefits-organizing-color/#:~:text=Adding%20color%20will%20help%20you,finding%20the%20one%20you%20need.",
     category_id: 5,
+    time_id:5,
   },
   {
     product_name: "Plan an early bedtime",
@@ -328,6 +369,7 @@ const productData = [
       "“An early bedtime can improve sleep quality, reduce risk of disease or virus, improves memory, produce more energy, and improve heart health”",
     product_link: "https://www.huffpost.com/entry/go-to-bed-early_b_7157026",
     category_id: 6,
+    time_id:5,
   },
   // {
   //   product_name: "",
