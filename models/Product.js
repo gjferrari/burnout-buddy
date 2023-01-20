@@ -16,30 +16,30 @@ Product.init(
       autoIncrement: true,
     },
     product_name: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSON,
       allowNull: false,
     },
     product_content: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSON,
       allowNull: false,
     },
     product_link: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSON,
       allowNull: false,
       validate: {
         isUrl: true,
       },
     },
     //IS THERE A DATATYPE FOR LINKS?
-    time_id: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      references: {
-        model: "time",
-        key: "id",
-        unique: false,
-      },
-    },
+    // time_id: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   references: {
+    //     model: "time",
+    //     key: "id",
+    //     unique: false,
+    //   },
+    // },
     category_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
