@@ -329,24 +329,24 @@ const productData = [
     product_link: "https://www.huffpost.com/entry/go-to-bed-early_b_7157026",
     category_id: 6,
   },
-  //   {
-  //     product_name: "",
-  //     product_content: "",
-  //     product_link: "",
-  //     category_id: 6,
-  //   },
-  //   {
-  //     product_name: "",
-  //     product_content: "",
-  //     product_link: "",
-  //     category_id: 6,
-  //   },
-  //   {
-  //     product_name: "",
-  //     product_content: "",
-  //     product_link: "",
-  //     category_id: 6,
-  //   },
+  // {
+  //   product_name: "",
+  //   product_content: "",
+  //   product_link: "",
+  //   category_id: 6,
+  // },
+  // {
+  //   product_name: "",
+  //   product_content: "",
+  //   product_link: "",
+  //   category_id: 6,
+  // },
+  // {
+  //   product_name: "",
+  //   product_content: "",
+  //   product_link: "",
+  //   category_id: 6,
+  // },
 ];
 
 const seedProducts = () => Product.bulkCreate(productData);
