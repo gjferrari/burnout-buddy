@@ -16,3 +16,13 @@
 #btn:hover {
     box-shadow: 0 5px 10px rgba(21,34,54,.6);
 }
+
+#btnQuiz {
+    background-color: var(--light-pink);
+    color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+#btnQuiz:hover {
+    box-shadow: 0 5px 10px rgba(21,34,54,.6);
+}

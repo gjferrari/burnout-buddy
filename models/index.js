@@ -9,6 +9,7 @@ Product.belongsTo(Category);
 
 // Categories have many Products
 Category.hasMany(Product);
+
 // Products belongToMany Time (through ProductTime)
 Product.belongsToMany(Time, {
   through: {
