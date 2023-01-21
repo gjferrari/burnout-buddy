@@ -30,3 +30,8 @@
 #btnQuiz:hover {
     box-shadow: 0 5px 10px rgba(21,34,54,.6);
 }
+
+#link {
+    color: var(--light-pink);
+    font-size: .6rem;
+}
