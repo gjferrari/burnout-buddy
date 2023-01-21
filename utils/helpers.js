@@ -1,6 +1,6 @@
 module.exports = {
 // timer function
- countdown(): () => {
+ countdown: () => {
     let timeLeft = 300 // 5 min timer
     let timerContent = ''
   
