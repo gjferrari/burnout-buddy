@@ -1,5 +1,6 @@
+module.exports = {
 // timer function
-function countdown() {
+ countdown(): () => {
     let timeLeft = 300 // 5 min timer
     let timerContent = ''
   
@@ -23,3 +24,18 @@ function countdown() {
       }
     }, 1000);
 }
+// WIP - click event for match
+// let matchImgEl = document.getElementById('matchimg')
+// matchImgEl.addEventListener('click',function(event){
+//   let element = event.target
+//   if(element.matches(".matchimg")){
+//     var name = element.textContent
+//     getLatAndLon(name);
+//   }
+
+// })
+
+
+
+
+};
