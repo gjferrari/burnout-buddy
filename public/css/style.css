@@ -38,6 +38,7 @@
     font-size: .75rem;
 }
 
+
 #activities {
     padding: 25px;
 }
@@ -58,3 +59,13 @@ img {
     left: 80%;
     top: 200px;
 }
+
+#match
+    :hover {
+    src: "/images/lit_match_img.png";
+  }
+
+  #match {
+    color: pink
+  }
+

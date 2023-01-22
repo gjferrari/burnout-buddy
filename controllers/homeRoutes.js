@@ -1,32 +1,6 @@
 const router = require('express').Router();
 const { Category, Product } = require('../models');
 
-// // GET all models for homepage
-// router.get('/', async (req, res) => {
-
-//   try {
-//     const dbCategoryData = await Category.findAll({
-//       include: [
-//         {
-//           // model: Category,
-//           attributes: ['filename', 'description'],
-//         },
-//       ],
-//     });
-
-//     const categories = dbCategoryData.map((category) =>
-//       category.get({ plain: true })
-//     );
-
-//     res.render('homepage', {
-//       categories,
-//       loggedIn: req.session.loggedIn,
-//     });
-//   } catch (err) {
-//     console.log(err );
-//     res.status(500).json(err);
-//   }
-// });
 
 
 router.get('/', (req, res) => {

@@ -31,15 +31,15 @@ Product.init(
       },
     },
     //IS THERE A DATATYPE FOR LINKS?
-    // time_id: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   references: {
-    //     model: "time",
-    //     key: "id",
-    //     unique: false,
-    //   },
-    // },
+    time_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "time",
+        key: "id",
+        unique: false,
+      },
+    },
     category_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
