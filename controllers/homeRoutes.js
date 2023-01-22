@@ -1,32 +1,6 @@
 const router = require('express').Router();
 const { Category, Product } = require('../models');
 
-// // GET all models for homepage
-// router.get('/', async (req, res) => {
-
-//   try {
-//     const dbCategoryData = await Category.findAll({
-//       include: [
-//         {
-//           // model: Category,
-//           attributes: ['filename', 'description'],
-//         },
-//       ],
-//     });
-
-//     const categories = dbCategoryData.map((category) =>
-//       category.get({ plain: true })
-//     );
-
-//     res.render('homepage', {
-//       categories,
-//       loggedIn: req.session.loggedIn,
-//     });
-//   } catch (err) {
-//     console.log(err );
-//     res.status(500).json(err);
-//   }
-// });
 
 
 router.get('/', (req, res) => {
@@ -37,6 +11,20 @@ router.get('/', (req, res) => {
 
   res.render('landingpage');
 });
+
+// testing timer page
+router.get('/test', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/profile'); // change this
+    return;
+  }
+
+  res.render('activity');
+});
+
+router.get('/timer', (req, res) => {
+  res.render('timer');
+})
 
 
 
@@ -98,3 +86,5 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
+
