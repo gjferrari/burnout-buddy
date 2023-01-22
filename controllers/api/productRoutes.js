@@ -9,18 +9,19 @@ router.get("/", async (req, res) => {
   // find all products
   // be sure to include its associated Category and Time data
   await Product.findAll({
-    attributes: ["id", "product_name", "category_id"],
-    // include: [
-    //   {
-    //     model: Time,
-    //     attributes: ["id", "time_name"],
-    //     through: "ProductTime",
-    //   },
-    //   {
-    //     model: Category,
-    //     attributes: ["id", "category_name"],
-    //   },
-    // ],
+    // attributes: ["id", "product_name", "category_id"],
+    include: [
+      {
+        model: Time,
+        // attributes: ["id", "time_amount"],
+        // you only need to use attributes to exclude things but 
+        //since Time only has id and time_amount you can just refer to the Time model
+      },
+      {
+        model: Category,
+        // attributes: ["id", "category_name"],
+      },
+    ],
   })
     .then((productData) => {
       res.json(productData);
