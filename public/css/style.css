@@ -15,6 +15,8 @@
     background-color: var(--greenish);
     color: var(--dark-blue);
     border-color: var(--dark-blue);
+    margin-top: 5px;
+    text-align: center;
 }
 
 #btn:hover {
@@ -32,7 +34,38 @@
 }
 
 #link {
-    color: var(--light-pink);
-    font-size: .6rem;
+    color: var(--dark-pink);
+    font-size: .75rem;
 }
+
+
+#activities {
+    padding: 25px;
+}
+
+a{
+    display: block;
+}
+
+#timer{
+    font-size: 2rem;
+    text-align: center;
+}
+
+img {
+    max-width: 300px;
+    display: block;
+    position: relative;
+    left: 80%;
+    top: 200px;
+}
+
+#match
+    :hover {
+    src: "/images/lit_match_img.png";
+  }
+
+  #match {
+    color: pink
+  }
 
