@@ -12,6 +12,20 @@ router.get('/', (req, res) => {
   res.render('landingpage');
 });
 
+// testing timer page
+router.get('/test', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/profile'); // change this
+    return;
+  }
+
+  res.render('activity');
+});
+
+router.get('/timer', (req, res) => {
+  res.render('timer');
+})
+
 
 
 // GET one category
@@ -72,3 +86,5 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
+
