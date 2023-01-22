@@ -2,7 +2,9 @@ console.log('hello');
 
 const timer = document.querySelector('#timer');
 
-let timeLeft = 300 // 5 min timer
+// will need to link different timers to the activity
+
+let timeLeft = 300 // 5 min timer 
     // let timerContent = ''
   
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds

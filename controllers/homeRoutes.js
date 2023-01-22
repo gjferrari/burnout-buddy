@@ -48,6 +48,7 @@ router.get('/test', (req, res) => {
   res.render('activity');
 });
 
+// timer page route
 router.get('/timer', (req, res) => {
   res.render('timer');
 })
