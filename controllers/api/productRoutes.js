@@ -10,16 +10,17 @@ router.get("/", async (req, res) => {
   // be sure to include its associated Category and Time data
   await Product.findAll({
     // attributes: ["id", "product_name", "category_id"],
+    //if we decide we only want to pull these attributes for this route, that totally fine!
     include: [
       {
         model: Time,
         // attributes: ["id", "time_amount"],
-        // you only need to use attributes to exclude things but
-        //since Time only has id and time_amount you can just refer to the Time model
+        // you only need to use attributes to exclude things but since Time only has id and time_amount you can just refer to the Time model
       },
       {
         model: Category,
         // attributes: ["id", "category_name"],
+        //same note mentioned above in Time
       },
     ],
   })
