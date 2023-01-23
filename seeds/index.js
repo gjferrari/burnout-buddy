@@ -1,4 +1,4 @@
-const { User } = require("../models/user_models/User");
+const { User, Feeling } = require("../models/user_models/User","../user_models/Feeling");
 const seedCategories = require("./category-seeds");
 const seedProducts = require("./product-seeds");
 const seedTime = require("./time-seeds");
