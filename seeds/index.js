@@ -1,8 +1,10 @@
-const { User, Feeling } = require("../models/user_models/");
+const { User, Feeling } = require("../models/");
 const seedCategories = require("./category-seeds");
 const seedProducts = require("./product-seeds");
 const seedTime = require("./time-seeds");
 const seedProductTimes = require("./product-time-seeds");
+const userData = require("./userData.json");
+const feelingData = require("./feelingData.json");
 
 const sequelize = require("../config/connection");
 

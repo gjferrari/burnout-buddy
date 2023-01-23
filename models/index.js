@@ -3,8 +3,8 @@ const Product = require("./Product");
 const Category = require("./Category");
 const Time = require("./Time");
 const ProductTime = require("./ProductTime");
-const User = require("./user_models/User");
-const Feeling = require("./user_models/Feeling");
+const User = require("./User");
+const Feeling = require("./Feeling");
 
 // Feeling.belongsToMany(User);
 // User.hasMany
