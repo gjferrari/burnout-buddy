@@ -3,6 +3,11 @@ const Product = require("./Product");
 const Category = require("./Category");
 const Time = require("./Time");
 const ProductTime = require("./ProductTime");
+const User = require("./user_models/User");
+
+// Feeling.belongsToMany(User);
+// User.hasMany
+
 // Products belongsTo Category
 Product.belongsTo(Category);
 
@@ -30,4 +35,5 @@ module.exports = {
   Category,
   Time,
   ProductTime,
+  User,
 };

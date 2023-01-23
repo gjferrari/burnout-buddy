@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { User } = require("../../models/user_models/User");
 
 //model has user_id but I'm not sure we need it for userData= "auto increment:true" 
 
@@ -38,6 +38,11 @@ const userData = [
         email:"EllaCohen@gmail.com",
         password:"password7",
     },
+     {
+    name: "Sal",
+    email: "sal@hotmail.com",
+    password: "password12345",
+  },
 ];
 
 const seedUser = () => User.bulkCreate(userData);
