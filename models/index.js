@@ -4,10 +4,19 @@ const Category = require("./Category");
 const Time = require("./Time");
 const ProductTime = require("./ProductTime");
 const User = require("./user_models/User");
+const Feeling = require("./user_models/Feeling");
 
 // Feeling.belongsToMany(User);
 // User.hasMany
 
+User.hasMany(Feeling, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
+Feeling.belongsTo(User, {
+  foreignKey: "user_id",
+});
 // Products belongsTo Category
 Product.belongsTo(Category);
 
@@ -36,4 +45,5 @@ module.exports = {
   Time,
   ProductTime,
   User,
+  Feeling,
 };
