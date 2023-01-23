@@ -1,8 +1,10 @@
-const seedUser = require("../seeds/user_seeds/user-seeds");
+const { User, Feeling } = require("../models/");
 const seedCategories = require("./category-seeds");
 const seedProducts = require("./product-seeds");
 const seedTime = require("./time-seeds");
 const seedProductTimes = require("./product-time-seeds");
+const userData = require("./userData.json");
+const feelingData = require("./feelingData.json");
 
 const sequelize = require("../config/connection");
 
@@ -22,13 +24,21 @@ const seedAll = async () => {
   await seedProductTimes();
   console.log("\n----- PRODUCT TAGS SEEDED -----\n");
 
-  await seedUser();
-  console.log("\n----- USERS SEEDED -----\n");
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
 
-  // const users = await User.bulkCreate(userData, {
-  //   individualHooks: true,
-  //   returning: true,
-  // });
+  for (const feeling of feelingData) {
+    await Feeling.create({
+      ...feeling,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+
+  // await seedUser();
+  // console.log("\n----- USERS SEEDED -----\n");
+
   // console.log("\n-----USERS SEEDED-----\n");
 
   process.exit(0);
