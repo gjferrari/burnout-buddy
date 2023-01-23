@@ -12,6 +12,27 @@ router.get('/', (req, res) => {
   res.render('landingpage');
 });
 
+
+router.get('/quiz', (req, res) => {
+// pull in the quiz data here
+
+  res.render('quiz');
+});
+
+
+router.get('/journal', (req, res) => {
+  // pull in the user data here
+  
+    res.render('journal');
+  });
+
+  router.get('/home', (req, res) => {
+    // pull in the logged in data here
+    
+      res.render('homepage');
+    });
+
+
 // testing timer page
 router.get('/test', (req, res) => {
   if (req.session.loggedIn) {
