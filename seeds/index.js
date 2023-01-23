@@ -1,4 +1,4 @@
-const { User, Feeling } = require("../models/user_models/User","../user_models/Feeling");
+const { User, Feeling } = require("../models/user_models/");
 const seedCategories = require("./category-seeds");
 const seedProducts = require("./product-seeds");
 const seedTime = require("./time-seeds");
@@ -27,9 +27,9 @@ const seedAll = async () => {
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
+  for (const feeling of feelingData) {
+    await Feeling.create({
+      ...feeling,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
