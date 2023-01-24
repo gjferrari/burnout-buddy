@@ -1,9 +1,22 @@
-<div class="col">
+{{!-- <div class="col">
  <div class="card">
   <div class="card-body">
     {{Feeling}}
     {{name}}
+    <p>Here is some text</p>
 
   </div>
 </div>
-</div>
+</div> --}}
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{Feeling}}</h5>
+        <p class="card-text">On {{date_created}} {{user.name}} was feeling {{name}}.</p>
+        <a href="/quiz" class="btn btn-primary">Re-take Quiz</a>
+      </div>
+    </div>
+  </div>
