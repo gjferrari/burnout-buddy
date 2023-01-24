@@ -6,13 +6,17 @@
     <div class="card text-center">
             <h3 class="card-title">How are you feeling today?</h3>
             <div id = 'feelingbtn'>
-            <p class="card-text">
+                <form class="form feeling-form">
+            {{!-- <p class="card-text"> --}}
                     {{#each question as |q|}}
-                    <a href="activity" class="btn btn-primary w-25 p-3 mx-auto" 
-            id="btnQuiz"  onclick="feelingQuizHandler({{question_feeling}})" >{{question_feeling}}</a>
+                    <a class="btn btn-primary w-25 p-3 mx-auto" 
+            id ="btnQuiz" href="/activity" type="submit" >{{question_feeling}}</a>
+                    {{!-- <a href="" class="btn btn-primary w-25 p-3 mx-auto" 
+            id ="btnQuiz" type="submit" >{{question_feeling}}</a> --}}
                     {{/each}}
 
     </div>
+    </form>
     </div>
 
     <script src="./js/feelingsquiz.js"></script>
