@@ -1,12 +1,11 @@
 const router = require('express').Router();
-const { Category, Product } = require('../models');
+const { Category, Product, User, Feeling } = require('../models');
 
 
 
 router.get('/', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/profile'); // change this
-    return;
+    res.redirect('/home'); // 
   }
 
   res.render('landingpage');
@@ -19,7 +18,7 @@ router.get('/activity', async (req, res) => {
       include: [
         {
           model: Product
-        },
+         },
       ],
     });
 
@@ -28,8 +27,66 @@ router.get('/activity', async (req, res) => {
     res.render('activity', {
       activity
     });
+    
   } catch (err) {
     res.status(500).json(err);
+  }
+ });
+
+
+router.get('/quiz', (req, res) => {
+// pull in the quiz data here
+
+  res.render('quiz');
+});
+
+router.get('/activities', (req, res) => {
+  // pull in the activity data here
+  
+    res.render('activity');
+  });
+  
+
+
+router.get('/journal', async (req, res) => {
+  try{
+
+    const userData = await Feeling.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+
+    // Serialize data so the template can read it
+    const users = userData.map((user) => user.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('journal', {
+      users, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+  
+
+  });
+
+  router.get('/home', (req, res) => {
+    // pull in the logged in data here
+    
+      res.render('homepage', {
+        logged_in: req.session.logged_in 
+      });
+    });
+
+
+// testing timer page
+router.get('/test', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/profile'); // change this
+    return;
+
   }
 });
 

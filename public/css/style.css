@@ -60,13 +60,14 @@ a{
     text-align: center;
 }
 
+
 #emotionalSupportBob {
     max-width: 300px;
     display: block;
     position: relative;
     left: 80%;
     top: 200px;
-}
+} 
 
 #match
     :hover {
