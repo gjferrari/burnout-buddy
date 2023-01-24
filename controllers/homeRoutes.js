@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Product, User, Feeling } = require('../models');
+const { Category, Product, User, Feeling, Questions } = require('../models');
 
 
 
@@ -34,12 +34,24 @@ router.get('/activity', async (req, res) => {
  });
 
 
-router.get('/quiz', (req, res) => {
-// pull in the quiz data here
+router.get('/quiz', async (req, res) => {
+  try {
+    const questionData = await Questions.findAll({
+      
+    });
 
-  res.render('quiz');
-});
+    const question = questionData.map((question) => question.get({plain: true}));
+    console.log(question)
+    res.render('quiz', {
+      question
+    });
+    
+  } catch (err) {
+    res.status(500).json(err);
+  }
+ });
 
+ 
 router.get('/activities', (req, res) => {
   // pull in the activity data here
   
