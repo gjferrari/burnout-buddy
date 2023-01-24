@@ -57,8 +57,21 @@ router.get('/activities', (req, res) => {
   
     res.render('activity');
   });
-  
 
+  // signup route
+router.get('/signup', (req, res) => {
+
+    
+      res.render('signup');
+  });
+  
+  // after login page route
+  router.get('/afterLogin', (req, res) => {
+  
+    
+      res.render('afterLogin');
+  });
+  
 
   router.get('/journal', async (req, res) => {
     try{
