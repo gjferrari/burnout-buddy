@@ -29,7 +29,7 @@ AND SO THAT they can share their wellness journey with community support.
 When building this app we installed the [express-session](https://www.npmjs.com/package/express-session) package stores the session data on the client in a cookie, [dotenv package](https://www.npmjs.com/package/dotenv) to use environment variables, the [bcrypt package](https://www.npmjs.com/package/bcrypt) to hash passwords, [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) packages to add authentication,  [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for our Views, used the [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize) packages to connect to a MySQL database for our Models, and create an Express.js API for our Controllers, and [Hands-On-Table](https://handsontable.com/docs/javascript-data-grid/installation/) for new technology discoverd outside of class lecture. USERS WILL ONLY NEED TO USE THE BROWSER TO ACCESS AND USE OUR BURNOUT BUDDY APP.<br/>
 
 ## Contribution
-This assignment was worked on by students: [Claire Bain](claire.bain3@gmail.com) on the Front End Development, [Mathew Chandler](cascabelrock@gmail.com) on the Back End Development, [Nicole Cohen](nicolerosee19@gmail.com) on the Front End Development, [Genevieve Ferrari](genferrari@gmail.com) on the Back End Development, and [Marta Wambaugh](marwambaugh@gmail.com) as Project Manager and Content Creator. With the support of our teaching assistant's and tutors, the students also used universal resources such as YouTube, GitHub.com, StackOverflow.com, and our class resources. Many thanks to those who continue to support our learning in the technological community.<br/>
+This assignment was worked on by students: [Claire Bain](https://github.com/clairebain3) on the Front End Development, [Mathew Chandler](https://github.com/Stingxming) on the Back End Development, [Nicole Cohen](https://github.com/nrose19) on the Front End Development, [Genevieve Ferrari](https://github.com/gjferrari) on the Back End Development, and [Marta Wambaugh](https://github.com/mwambaugh) as Project Manager and Content Creator. With the support of our teaching assistant's and tutors, the students also used universal resources such as YouTube, GitHub.com, StackOverflow.com, and our class resources. Many thanks to those who continue to support our learning in the technological community.<br/>
 
 ## Usage
 This BurnoutBuddy App is intended to aid those struggling with work or personal "burnout" signs and symptoms. Our targeted user might know their available time, (5, 10, 15, 20, or 30 minutes) and be looking for a wellness activity/article that could lead to an improved quality of life. The journal or "check-in" feature allows the user to record and reflect on their progress and share their completed wellness works with peers also using the application. The sense of accountability and competitiveness we believe aids to our user's progress in their journey of wellness.<br/>
@@ -42,31 +42,32 @@ Please reach out to Burnout Buddy Developers though their GitHub or via E-mail w
 
 Claire Bain<br/>
 claire.bain3@gmail.com<br/>
-[Claire Bain](https://github.com/clairebain3)<br/>
+[Claire Bain's GitHub](https://github.com/clairebain3)<br/>
 
 Mathew Chandler<br/>
 cascabelrock@gmail.com<br/>
-[Mathew-Chandler's-GitHub](https://github.com/Stingxming)<br/>
+[Mathew Chandler's GitHub](https://github.com/Stingxming)<br/>
 
 Nicole Cohen<br/>
 nicolerosee19@gmail.com<br/>
-[Nicole-Cohen's-Github](https://github.com/nrose19)<br/>
+[Nicole Cohen's Github](https://github.com/nrose19)<br/>
 
 Genevieve Ferrari<br/>
 genferrari@gmail.com<br/>
-[Genevieve-Ferrari's-GitHub](https://github.com/gjferrari)<br/>
+[Genevieve Ferrari's GitHub](https://github.com/gjferrari)<br/>
 
 Marta Wambaugh<br/>
 marwambaugh@gmail.com <br/>
-[Marta-Wambaugh's-GitHub](https://github.com/mwambaugh)<br/>
+[Marta Wambaugh's GitHub](https://github.com/mwambaugh)<br/>
 
 # Visuals
-[Login-Page-Screenshot-Screenshot](./assets/loginPageScreenshot.jpg)<br/>
-[How-Are-You-Feeling-Screenshot](./assets/FeelingsScreenshot.jpg)<br/>
-[Length-Of-Activity-Quiz-Screenshot](./assets/timeQuizScreenshot.jpg)<br/>
-[Activity-Cards-Screenshot](./assets/activitiesScreenshot.jpg)<br/>
-[Activity-Timer-Screenshot](./assets/timerScreenshot.jpg)<br/>
-[BOB-Congratulations-Screenshot](./assets/BOBCongratsScreenshot.jpg)<br/>
+[Login Page Screenshot](./assets/loginPageScreenshot.jpg)<br/>
+[Member SIgn Up Screenshot](./assets/SIGNUPScreenshot.jpg)<br/>
+[How Are You Feeling Screenshot](./assets/FeelingsScreenshot.jpg)<br/>
+[Length Of Activity Quiz Screenshot](./assets/timeQuizScreenshot.jpg)<br/>
+[Activity Cards Screenshot](./assets/activitiesScreenshot.jpg)<br/>
+[Activity Timer Screenshot](./assets/timerScreenshot.jpg)<br/>
+[BOB Congratulations Screenshot](./assets/BOBCongratsScreenshot.jpg)<br/>
 
 
 ## License
