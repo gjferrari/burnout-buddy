@@ -1,32 +1,10 @@
 <body style="background-color: rgba(207,227,226);">
-    <h1 style="color: rgba(21,34,54); font-size: 2rem; text-align: center; position: relative; align-top: 50%;">
+    <h1 style="color: rgba(21,34,54); font-size: 2rem; text-align: center; position: relative; align-top: 50%;" id="finishedActivity">
         You've accomplished your BurnOut Buddy activity!
     </h1>
     <img src="./images/bob_says_congrats!.png" id="congratsBob"/>
-    <footer>
-        <a href="#" class="btn btn-primary" id="continueToHomepage">Continue to Homepage!</a>
+    <footer id="homepageBtn">
+        <a href="home" class="btn btn-primary" id="continueToHomepage">Continue to Homepage!</a>
     </footer>
 </body> 
 
-
-  {{!-- {{#each activity}}
-  <div class="col-sm-4" id="activities">
-    <div class="card text-center" style="border-color: rgba(21,34,54);">
-        <div class="card-header" id="category_name"
-        style="background-color: rgba(185,203,217); 
-        color: rgba(21,34,54); 
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        border-color: rgba(21,34,54);">
-        {{category_name}}
-        </div>
-      {{#each products}}
-      <div class="card-body" style="color:rgba(21,34,54); font-family:Georgia, 'Times New Roman', Times, serif;">
-        <h5 class="card-title" id="product_name">{{product_name}}</h5>
-        <p class="card-text" id="product_content">{{product_content}}</p>
-        <a href='{{product_link}}'class="card-text" id="link" id="product_link">Learn more about this activity!</a>
-        <a href="#" class="btn btn-primary" id="btn">Start Activity{{!-- ACTIVITY START BUTTON (this button will lead into the timer (javascript)) --}}</a>
-      </div>
-      {{/each}}
-    </div>
-  </div>
-  {{/each}} --}}
