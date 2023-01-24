@@ -5,7 +5,7 @@
 // will probably need an additional js file to handle answer clicks
 
 const router = require("express").Router();
-const { Questions, Answers } = require("../../models");
+const { Questions, Feeling } = require("../../models");
 
 // The `/api/categories` endpoint
 
@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
   // find all questions
   // be sure to include its associated answers
   Questions.findAll({
-    include: [Answers],
+    include: [Feeling],
   })
     .then((questions) => res.json(questions))
     .catch((err) => res.status(500).json(err));
@@ -26,7 +26,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    include: [Answers],
+    include: [Feeling],
   })
     .then((questions) => res.json(questions))
     .catch((err) => res.status(400).json(err));
