@@ -32,6 +32,27 @@ router.get("/", async (req, res) => {
     });
 });
 
+
+// ACTIVITY PAGE ROUTES
+  // category route works better....save just in case changes.
+        // router.post('/', async (req, res) => {
+        //   try { 
+        //     const activityData = await Product.create({
+        //     product_name: req.body.product_name,
+        //     product_content: req.body.product_content,
+        //     product_link: req.body.product_link,
+        //   });
+        //   // if the dish is successfully created, the new response will be returned as json
+        //   res.status(200).json(activityData)
+        // } catch (err) {
+        //   res.status(400).json(err);
+        // }
+        // });
+        
+
+
+
+
 // get one product
 
 router.get("/:id", async (req, res) => {

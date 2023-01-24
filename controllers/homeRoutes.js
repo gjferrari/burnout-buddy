@@ -11,6 +11,28 @@ router.get('/', (req, res) => {
   res.render('landingpage');
 });
 
+// activity page
+router.get('/activity', async (req, res) => {
+  try {
+    const activityData = await Category.findAll({
+      include: [
+        {
+          model: Product
+         },
+      ],
+    });
+
+    const activity = activityData.map((activity) => activity.get({plain: true}));
+    console.log(activity)
+    res.render('activity', {
+      activity
+    });
+    
+  } catch (err) {
+    res.status(500).json(err);
+  }
+ });
+
 
 router.get('/quiz', (req, res) => {
 // pull in the quiz data here
@@ -34,9 +56,6 @@ router.get('/journal', async (req, res) => {
         {
           model: User,
           attributes: ['name'],
-        },
-      ],
-    });
 
     // Serialize data so the template can read it
     const users = userData.map((user) => user.get({ plain: true }));
@@ -67,16 +86,24 @@ router.get('/test', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/profile'); // change this
     return;
-  }
 
-  res.render('activity');
+  }
 });
 
+// timer page route
 router.get('/timer', (req, res) => {
   res.render('timer');
+});
+
+// finished activity page route
+router.get('/finishedactivity', (req, res) => {
+  res.render('finishedactivity')
 })
 
-
+// time quiz page route
+router.get('/timeQuiz', (req, res) => {
+  res.render('timeQuiz')
+})
 
 // GET one category
 router.get('/category/:id', async (req, res) => {
