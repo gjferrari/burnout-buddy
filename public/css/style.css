@@ -114,7 +114,8 @@ a{
 }
 
 #activityTimer,
-#finishedActivity {
+#finishedActivity,
+#landingPage {
     margin-top: 150px;
 }
 
@@ -124,6 +125,10 @@ a{
     justify-content: center;
 }
 
+#timerLink {
+    color: white;
+    margin-top: 150px;
+}
 
 /* web responsiveness */
 
