@@ -6,7 +6,11 @@ const timer = document.querySelector('#timer');
 
 function activityTime() {
 
-let timeLeft = 300 // 5 min timer 
+var timeLeft = 300 // 5 min timer 
+
+var minutes = parseInt((timeLeft % 3600) / 60);
+var seconds = parseInt(timeLeft % 60);
+
     // let timerContent = ''
   
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
