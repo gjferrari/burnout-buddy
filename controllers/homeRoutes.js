@@ -72,6 +72,10 @@ router.get('/signup', (req, res) => {
       res.render('afterLogin');
   });
   
+  router.get('/logout', (req, res) => {
+
+    res.render('landingpage');
+  })
 
   router.get('/journal', async (req, res) => {
     try{
