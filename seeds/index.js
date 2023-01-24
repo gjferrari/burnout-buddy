@@ -4,6 +4,7 @@ const seedProducts = require("./product-seeds");
 const seedTime = require("./time-seeds");
 const seedProductTimes = require("./product-time-seeds");
 const userData = require("./userData.json");
+const questionData = require("./questionData.json")
 const feelingData = require("./feelingData.json");
 
 const sequelize = require("../config/connection");
