@@ -62,8 +62,12 @@ marwambaugh@gmail.com <br/>
 
 # Visuals
 [Login-Page-Screenshot-Screenshot](./assets/loginPageScreenshot.jpg)<br/>
+[How-Are-You-Feeling-Screenshot](./assets/FeelingsScreenshot.jpg)<br/>
 [Length-Of-Activity-Quiz-Screenshot](./assets/timeQuizScreenshot.jpg)<br/>
 [Activity-Cards-Screenshot](./assets/activitiesScreenshot.jpg)<br/>
+[Activity-Timer-Screenshot](./assets/timerScreenshot.jpg)<br/>
+[BOB-Congratulations-Screenshot](./assets/BOBCongratsScreenshot.jpg)<br/>
+
 
 ## License
 MIT [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br/>
