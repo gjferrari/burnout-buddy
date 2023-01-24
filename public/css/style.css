@@ -115,7 +115,10 @@ a{
 
 #activityTimer,
 #finishedActivity,
-#landingPage {
+#landingPage, {
+#login,
+#signup {
+
     margin-top: 150px;
 }
 
@@ -125,9 +128,25 @@ a{
     justify-content: center;
 }
 
+
 #timerLink {
     color: white;
     margin-top: 150px;
+
+#login,
+#signup {
+    display: flex;
+    justify-content: center;
+}
+
+.begin {
+    color: var(--dark-blue);
+    margin: 10px;
+}
+.begin:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+    text-shadow: 0 2px 2px white;
 }
 
 /* web responsiveness */
