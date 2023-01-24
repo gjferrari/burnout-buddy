@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the homepage page
-        document.location.replace('/quiz');
+        document.location.replace('/afterLogin');
       } else {
         alert(response.statusText);
       }
@@ -23,11 +23,44 @@ const loginFormHandler = async (event) => {
   };
   
 
+
+  const signupFormHandler = async (event) => {
+    event.preventDefault();
   
-  document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+    const name = document.querySelector('#name-signup').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
+  
+    if (name && email && password) {
+      const response = await fetch('/api/user', {
+        method: 'POST',
+        body: JSON.stringify({ name, email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        document.location.replace('/afterLogin');
+      } else {
+        alert(response.statusText);
+      }
+    }
+  };
+
+  
+  const loginButton = document.getElementById('loginBtn');
+
+  if(loginButton){
+    loginButton.addEventListener("click", loginFormHandler);
+  }
+  
+  
+  const signupButton = document.getElementById('signupBtn');
   
 
+
+  if(signupButton){
+    signupButton.addEventListener("click", signupFormHandler);
+  }
+  
 
 
