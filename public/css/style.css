@@ -115,7 +115,7 @@ a{
 
 #activityTimer,
 #finishedActivity,
-#landingPage, {
+#landingPage,
 #login,
 #signup {
 
@@ -132,6 +132,7 @@ a{
 #timerLink {
     color: white;
     margin-top: 150px;
+}
 
 #login,
 #signup {
