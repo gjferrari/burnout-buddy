@@ -4,7 +4,9 @@ const timer = document.querySelector('#timer');
 
 // will need to link different timers to the activity
 
-let timeLeft = 300 // 5 min timer 
+function activityTime() {
+
+let timeLeft = 5 // 5 min timer 
     // let timerContent = ''
   
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
@@ -26,5 +28,20 @@ let timeLeft = 300 // 5 min timer
         // timerContent = '';
         // Use `clearInterval()` to stop the timer
         clearInterval(timeInterval);
+        activityPage();
       }
     }, 1000);
+
+// function to bring us to the finished activity page
+function activityPage () {
+    if(timeLeft === 0){
+      console.log('working!')
+      var queryString = '/finishedactivity';
+
+      location.assign(queryString);
+    }
+}
+
+}
+
+activityTime();
