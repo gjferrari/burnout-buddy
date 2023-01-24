@@ -29,10 +29,10 @@ router.get('/activities', (req, res) => {
 router.get('/journal', async (req, res) => {
   try{
 
-    const userData = await User.findAll({
+    const userData = await Feeling.findAll({
       include: [
         {
-          model: Feeling,
+          model: User,
           attributes: ['name'],
         },
       ],
