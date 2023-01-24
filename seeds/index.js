@@ -3,6 +3,7 @@ const seedCategories = require("./category-seeds");
 const seedProducts = require("./product-seeds");
 const seedTime = require("./time-seeds");
 const seedProductTimes = require("./product-time-seeds");
+const seedQuestions = require("./question-seed");
 const userData = require("./userData.json");
 const feelingData = require("./feelingData.json");
 
@@ -23,6 +24,9 @@ const seedAll = async () => {
 
   await seedProductTimes();
   console.log("\n----- PRODUCT TIME SEEDED -----\n");
+
+  await seedQuestions();
+  console.log("\n----- PRODUCT QUESTIONS SEEDED -----\n");
 
   const users = await User.bulkCreate(userData, {
     individualHooks: true,
