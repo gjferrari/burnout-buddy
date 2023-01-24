@@ -48,29 +48,27 @@ router.get('/activities', (req, res) => {
   
 
 
-router.get('/journal', async (req, res) => {
-  try{
-
-    const userData = await Feeling.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-
-    // Serialize data so the template can read it
-    const users = userData.map((user) => user.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('journal', {
-      users, 
-      logged_in: req.session.logged_in 
+  router.get('/journal', async (req, res) => {
+    try{
+      const userData = await Feeling.findAll({
+        include: [
+          {
+            model: User,
+            attributes: ['name'],
+          },
+        ],
+      });
+      // Serialize data so the template can read it
+      const users = userData.map((user) => user.get({ plain: true }));
+      // Pass serialized data and session flag into template
+      res.render('journal', {
+        users,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
     });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-  
-
-  });
 
   router.get('/home', (req, res) => {
     // pull in the logged in data here
