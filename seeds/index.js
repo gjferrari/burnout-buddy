@@ -13,7 +13,7 @@ const seedAll = async () => {
   console.log("\n----- DATABASE SYNCED -----\n");
 
   await seedTime();
-  console.log("\n----- TAGS SEEDED -----\n");
+  console.log("\n----- TIME SEEDED -----\n");
 
   await seedCategories();
   console.log("\n----- CATEGORIES SEEDED -----\n");
@@ -22,7 +22,7 @@ const seedAll = async () => {
   console.log("\n----- PRODUCTS SEEDED -----\n");
 
   await seedProductTimes();
-  console.log("\n----- PRODUCT TAGS SEEDED -----\n");
+  console.log("\n----- PRODUCT TIME SEEDED -----\n");
 
   const users = await User.bulkCreate(userData, {
     individualHooks: true,
