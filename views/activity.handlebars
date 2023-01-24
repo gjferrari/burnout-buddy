@@ -2,133 +2,14 @@
     {{!-- BOOTSTRAP used in this handlebar template --}}
 
 {{!-- These cards focus on the activity cards available to you --}}
-<div class="row" >
+<body style="background-color: rgba(234,231,226);">
+  <h1 style="text-align:center;">Which activity feels right for you?</h1>
+<div class="row" id="activityPage">
 
-  {{!--Mindfulness--}}
-  <div class="col-sm-6" id="activities">
-    <div class="card text-center" style="border-color: rgba(21,34,54);">
-        <div class="card-header" 
-        style="background-color: rgba(185,203,217); 
-        color: rgba(21,34,54); 
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        border-color: rgba(21,34,54);">
-        {{category_name}}
-        </div>
-      <div class="card-body" style="color:rgba(21,34,54); font-family:Georgia, 'Times New Roman', Times, serif;">
-        <h5 class="card-title">{{product_name}}</h5>
-        <p class="card-text">{{product_content}}</p>
-        <a href='{{product_link}}'class="card-text" id="link">Learn more about this activity!</a>
-        <a href="#" class="btn btn-primary" id="btn">Start Activity{{!-- ACTIVITY START BUTTON (this button will lead into the timer (javascript)) --}}</a>
-      </div>
-    </div>
-  </div>
 
-  {{!--Movement--}}
-  <div class="col-sm-6" id="activities">
-    <div class="card text-center" style="border-color: rgba(21,34,54);">
-        <div class="card-header" 
-        style="background-color: rgba(185,203,217); 
-        color: rgba(21,34,54); 
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        border-color: rgba(21,34,54);">
-        {{category_name}}
-        </div>
-      <div class="card-body" style="color:rgba(21,34,54); font-family:Georgia, 'Times New Roman', Times, serif;">
-        <h5 class="card-title">{{product_name}}</h5>
-        <p class="card-text">{{product_content}}</p>
-        <a href='{{product_link}}'class="card-text" id="link">Learn more about this activity!</a>
-        <a href="#" class="btn btn-primary" id="btn">Start Activity{{!-- ACTIVITY START BUTTON (this button will lead into the timer (javascript)) --}}</a>
-      </div>
-    </div>
-  </div>
-
-  {{!--Outreach--}}
-  <div class="col-sm-6" id="activities">
-    <div class="card text-center" style="border-color: rgba(21,34,54);">
-        <div class="card-header" 
-        style="background-color: rgba(185,203,217); 
-        color: rgba(21,34,54); 
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        border-color: rgba(21,34,54);">
-        {{category_name}}
-        </div>
-      <div class="card-body" style="color:rgba(21,34,54); font-family:Georgia, 'Times New Roman', Times, serif;">
-        <h5 class="card-title">{{product_name}}</h5>
-        <p class="card-text">{{product_content}}</p>
-        <a href='{{product_link}}'class="card-text" id="link">Learn more about this activity!</a>
-        <a href="#" class="btn btn-primary" id="btn">Start Activity{{!-- ACTIVITY START BUTTON (this button will lead into the timer (javascript)) --}}</a>
-      </div>
-    </div>
-  </div>
-
-  {{!--Distract--}}
-  <div class="col-sm-6" id="activities">
-    <div class="card text-center" style="border-color: rgba(21,34,54);">
-        <div class="card-header" 
-        style="background-color: rgba(185,203,217); 
-        color: rgba(21,34,54); 
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        border-color: rgba(21,34,54);">
-        {{category_name}}
-        </div>
-      <div class="card-body" style="color:rgba(21,34,54); font-family:Georgia, 'Times New Roman', Times, serif;">
-        <h5 class="card-title">{{product_name}}</h5>
-        <p class="card-text">{{product_content}}</p>
-        <a href='{{product_link}}'class="card-text" id="link">Learn more about this activity!</a>
-        <a href="#" class="btn btn-primary" id="btn">Start Activity{{!-- ACTIVITY START BUTTON (this button will lead into the timer (javascript)) --}}</a>
-      </div>
-    </div>
-  </div>
-
-  {{!--Create--}}
-  <div class="col-sm-6" id="activities">
-    <div class="card text-center" style="border-color: rgba(21,34,54);">
-        <div class="card-header" 
-        style="background-color: rgba(185,203,217); 
-        color: rgba(21,34,54); 
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        border-color: rgba(21,34,54);">
-        {{category_name}}
-        </div>
-      <div class="card-body" style="color:rgba(21,34,54); font-family:Georgia, 'Times New Roman', Times, serif;">
-        <h5 class="card-title">{{product_name}}</h5>
-        <p class="card-text">{{product_content}}</p>
-        <a href='{{product_link}}'class="card-text" id="link">Learn more about this activity!</a>
-        <a href="#" class="btn btn-primary" id="btn">Start Activity{{!-- ACTIVITY START BUTTON (this button will lead into the timer (javascript)) --}}</a>
-      </div>
-    </div>
-  </div>
-
-  {{!--Rest--}}
-  <div class="col-sm-6" id="activities">
-    <div class="card text-center" style="border-color: rgba(21,34,54);">
-        <div class="card-header" 
-        style="background-color: rgba(185,203,217); 
-        color: rgba(21,34,54); 
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        border-color: rgba(21,34,54);">
-        {{category_name}}
-        </div>
-      <div class="card-body" style="color:rgba(21,34,54); font-family:Georgia, 'Times New Roman', Times, serif;">
-        <h5 class="card-title">{{product_name}}</h5>
-        <p class="card-text">{{product_content}}</p>
-        <a href='{{product_link}}'class="card-text" id="link">Learn more about this activity!</a>
-        <a href="#" class="btn btn-primary" id="btn">Start Activity{{!-- ACTIVITY START BUTTON (this button will lead into the timer (javascript)) --}}</a>
-      </div>
-    </div>
-  </div>
 </div>
+<script src="/js/activity.js"></script>
+</body>
 
 
 
-
-{{!-- Future Development: Own activity page? --}}
-    {{!-- This card focuses on the chosen activity --}}
-        {{!-- future development (not MVP) card could be changed to encompass a picture as well? --}}
-        {{!-- <div class="card text-center">
-        <div class="card-body">
-            <h5 class="card-title">{{!-- ACTIVITY TITLE --}}</h5>
-            <p class="card-text">{{!-- ACTIVITY DESCRIPTION --}}</p>
-            <a href="#" class="btn btn-primary">{{!-- ACTIVITY START BUTTON (this button will lead into the timer (javascript)) --}}</a>
-        </div>
-        </div> --}}

@@ -1,32 +1,6 @@
 const router = require('express').Router();
 const { Category, Product } = require('../models');
 
-// // GET all models for homepage
-// router.get('/', async (req, res) => {
-
-//   try {
-//     const dbCategoryData = await Category.findAll({
-//       include: [
-//         {
-//           // model: Category,
-//           attributes: ['filename', 'description'],
-//         },
-//       ],
-//     });
-
-//     const categories = dbCategoryData.map((category) =>
-//       category.get({ plain: true })
-//     );
-
-//     res.render('homepage', {
-//       categories,
-//       loggedIn: req.session.loggedIn,
-//     });
-//   } catch (err) {
-//     console.log(err );
-//     res.status(500).json(err);
-//   }
-// });
 
 
 router.get('/', (req, res) => {
@@ -38,22 +12,41 @@ router.get('/', (req, res) => {
   res.render('landingpage');
 });
 
-// testing timer page
-router.get('/test', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/profile'); // change this
-    return;
-  }
+// activity page
+router.get('/activity', async (req, res) => {
+  try {
+    const activityData = await Category.findAll({
+      include: [
+        {
+          model: Product
+        },
+      ],
+    });
 
-  res.render('activity');
+    const activity = activityData.map((activity) => activity.get({plain: true}));
+    console.log(activity)
+    res.render('activity', {
+      activity
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // timer page route
 router.get('/timer', (req, res) => {
   res.render('timer');
+});
+
+// finished activity page route
+router.get('/finishedactivity', (req, res) => {
+  res.render('finishedactivity')
 })
 
-
+// time quiz page route
+router.get('/timeQuiz', (req, res) => {
+  res.render('timeQuiz')
+})
 
 // GET one category
 router.get('/category/:id', async (req, res) => {

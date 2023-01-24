@@ -9,16 +9,18 @@ router.get("/", async (req, res) => {
   // find all products
   // be sure to include its associated Category and Time data
   await Product.findAll({
-    attributes: ["id", "product_name", "category_id"],
+    // attributes: ["id", "product_name", "category_id"],
+    //if we decide we only want to pull these attributes for this route, that totally fine!
     include: [
       {
         model: Time,
-        attributes: ["id", "time_name"],
-        through: "ProductTime",
+        // attributes: ["id", "time_amount"],
+        // you only need to use attributes to exclude things but since Time only has id and time_amount you can just refer to the Time model
       },
       {
         model: Category,
-        attributes: ["id", "category_name"],
+        // attributes: ["id", "category_name"],
+        //same note mentioned above in Time
       },
     ],
   })
@@ -30,15 +32,54 @@ router.get("/", async (req, res) => {
     });
 });
 
+
+// ACTIVITY PAGE ROUTES
+  // category route works better....save just in case changes.
+        // router.post('/', async (req, res) => {
+        //   try { 
+        //     const activityData = await Product.create({
+        //     product_name: req.body.product_name,
+        //     product_content: req.body.product_content,
+        //     product_link: req.body.product_link,
+        //   });
+        //   // if the dish is successfully created, the new response will be returned as json
+        //   res.status(200).json(activityData)
+        // } catch (err) {
+        //   res.status(400).json(err);
+        // }
+        // });
+        
+
+
+
+
 // get one product
-router.get("/:id", (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Time data
+
+router.get("/:id", async (req, res) => {
+  try {
+    const productData = await Product.findByPk(req.params.id, {
+      include: [{ model: Time }, { model: Category }],
+    });
+
+    if (!productData) {
+      res.status(404).json({ message: "No product found with this id!" });
+      return;
+    }
+
+    res.status(200).json(productData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
+
+// router.get("/:id", (req, res) => {
+//   // find a single product by its `id`
+//   // be sure to include its associated Category and Time data
+// });
 
 // create new product
 router.post("/", (req, res) => {
- // create body
+  // create body
   Product.create(req.body)
     .then((product) => {
       // if there's product time, we need to create pairings to bulk create in the ProductTime model
