@@ -4,7 +4,7 @@ const Category = require("./Category");
 const Time = require("./Time");
 const ProductTime = require("./ProductTime");
 const User = require("./User");
-const Question = require("./Questions");
+const Questions = require("./Questions");
 const Feeling = require("./Feeling");
 
 // Feeling.belongsToMany(User);
@@ -46,6 +46,6 @@ module.exports = {
   Time,
   ProductTime,
   User,
-  Question,
+  Questions,
   Feeling,
 };

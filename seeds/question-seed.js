@@ -1,4 +1,4 @@
-const { Question } = require("../models");
+const { Questions } = require("../models");
 
 const questionData = [
   {
@@ -30,6 +30,6 @@ const questionData = [
   },
 ];
 
-const seedQuestions = () => Question.bulkCreate(questionData);
+const seedQuestions = () => Questions.bulkCreate(questionData);
 
 module.exports = seedQuestions;
