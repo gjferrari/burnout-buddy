@@ -35,6 +35,7 @@ User.init(
         len: [8],
       },
     },
+    // add key for quiz results to store answers
   },
   {
     hooks: {
