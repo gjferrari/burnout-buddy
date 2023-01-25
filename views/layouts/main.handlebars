@@ -8,11 +8,13 @@
 
 <body id="main">
   <div class="flex-column justify-space-around">
+    {{#if logged_in}}
     <header class="display-flex justify-space-between align-center p-2 text-center">
       <h4>
-        <a href="/burnout-buddy/views/homepage.handlebars" id="burnoutBuddyLink">BurnOut Buddy</a>
+        <a href="/home" id="burnoutBuddyLink">BurnOut Buddy</a>
       </h4>
     </header>
+    {{/if}}
       <main class="container container-fluid mt-5">
         {{{ body }}}
       </main>
