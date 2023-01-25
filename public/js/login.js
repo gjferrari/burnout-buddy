@@ -22,6 +22,8 @@ const loginFormHandler = async (event) => {
     }
   };
   
+
+
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
@@ -43,6 +45,7 @@ const loginFormHandler = async (event) => {
       }
     }
   };
+
   
   const loginButton = document.getElementById('loginBtn');
 
@@ -53,6 +56,8 @@ const loginFormHandler = async (event) => {
   
   const signupButton = document.getElementById('signupBtn');
   
+
+
   if(signupButton){
     signupButton.addEventListener("click", signupFormHandler);
   }
