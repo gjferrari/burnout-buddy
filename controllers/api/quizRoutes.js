@@ -32,6 +32,23 @@ router.get("/:id", (req, res) => {
     .catch((err) => res.status(400).json(err));
 });
 
+router.post('/', async (req, res) => {
+  try {
+    const feelingData = await Feeling.create(req.body);
+
+    req.session.save(() => {
+      // req.session.user_id = user_id;
+
+      res.status(200).json(feelingData);
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+
+
+
 router.post("/", (req, res) => {
   // create a new question
   Questions.create(req.body)

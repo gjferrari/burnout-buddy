@@ -15,13 +15,15 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the homepage page
-        document.location.replace('/quiz');
+        document.location.replace('/afterLogin');
       } else {
         alert(response.statusText);
       }
     }
   };
   
+
+
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
@@ -37,18 +39,28 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/quiz');
+        document.location.replace('/afterLogin');
       } else {
         alert(response.statusText);
       }
     }
   };
+
   
-  document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+  const loginButton = document.getElementById('loginBtn');
+
+  if(loginButton){
+    loginButton.addEventListener("click", loginFormHandler);
+  }
   
-  document
-    .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
   
+  const signupButton = document.getElementById('signupBtn');
+  
+
+
+  if(signupButton){
+    signupButton.addEventListener("click", signupFormHandler);
+  }
+  
+
+

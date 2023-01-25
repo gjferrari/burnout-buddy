@@ -4,24 +4,19 @@
     {{!-- TODO: after writing route in quizRoutes that gets all the questions, use {{#each}} block in handlebars to render each question to page in a specific format --}}
    
     <div class="card text-center">
-            <h5 class="card-title">{{!--QUIZ QUESTION--}}</h5>
-            <p class="card-text">
-                <li>
-                    {{!--QUIZ QUESTION--}}
-                </li>
-                <li>
-                    {{!--QUIZ QUESTION--}}
-                </li>
-                <li>
-                    {{!--QUIZ QUESTION--}}
-                </li>
-                <li>
-                    {{!--QUIZ QUESTION--}}
-                </li>
-                <li>
-                    {{!--QUIZ QUESTION--}}
-                </li>
-            </p>
-            <a href="#" class="btn btn-primary w-25 p-3 mx-auto" 
-            id="btnQuiz">{{!--NEXT QUESTION--}}</a>
+            <h3 class="card-title">How are you feeling today?</h3>
+            <div id = 'feelingbtn'>
+                <form class="form feeling-form">
+            {{!-- <p class="card-text"> --}}
+                    {{#each question as |q|}}
+                    <a class="btn btn-primary w-25 p-3 mx-auto" 
+            id ="btnQuiz" href="/activity" type="submit" >{{question_feeling}}</a>
+                    {{!-- <a href="" class="btn btn-primary w-25 p-3 mx-auto" 
+            id ="btnQuiz" type="submit" >{{question_feeling}}</a> --}}
+                    {{/each}}
+
     </div>
+    </form>
+    </div>
+
+    <script src="./js/feelingsquiz.js"></script>

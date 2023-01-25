@@ -57,8 +57,8 @@ async function fetchCategories() {
       <div class="card-body" style="color:rgba(21,34,54); font-family:Georgia, 'Times New Roman', Times, serif;">
         <h5 class="card-title" id="product_name">${data[i].products[randomIndex].product_name}</h5>
         <p class="card-text" id="product_content">${data[i].products[randomIndex].product_content}</p>
-        <a href='${data[i].products[randomIndex].product_link}'class="card-text" id="link" id="product_link">Learn more about this activity!</a>
-        <a href="#" class="btn btn-primary" id="btn">Start Activity</a>
+        <a href='${data[i].products[randomIndex].product_link}' target="_blank" class="card-text" id="link" id="product_link">Learn more about this activity!</a>
+        <a href="/timer"class="btn btn-primary" id="btn">Start Activity</a>
       </div>
       </div>
     </div>
@@ -69,16 +69,19 @@ async function fetchCategories() {
 fetchCategories();
 {}
 
-// get_emoji: () => {
-//     const randomNum = Math.random();
+// to timer page
 
-//     // Return a random emoji
-//     if (randomNum > 0.7) {
-//       return `<span for="img" aria-label="lightbulb">💡</span>`;
-//     } else if (randomNum > 0.4) {
-//       return `<span for="img" aria-label="laptop">💻</span>`;
-//     } else {
-//       return `<span for="img" aria-label="gear">⚙️</span>`;
-//     }
-//   },
+const startButton = document.querySelector('#btn');
+
+startButton.addEventListener("click", function(event){
+  var element = event.target;
+  console.log(element)
+  if(element.matches("#btn")) {
+      // console.log(element.dataset)
+      var queryString = '/timer';
+
+      location.assign(queryString);
+  }
+
+});
 

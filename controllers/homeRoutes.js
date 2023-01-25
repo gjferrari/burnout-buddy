@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Product, User, Feeling } = require('../models');
+const { Category, Product, User, Feeling, Questions } = require('../models');
 
 
 
@@ -34,19 +34,48 @@ router.get('/activity', async (req, res) => {
  });
 
 
-router.get('/quiz', (req, res) => {
-// pull in the quiz data here
+router.get('/quiz', async (req, res) => {
+  try {
+    const questionData = await Questions.findAll({
+      
+    });
 
-  res.render('quiz');
-});
+    const question = questionData.map((question) => question.get({plain: true}));
+    console.log(question)
+    res.render('quiz', {
+      question
+    });
+    
+  } catch (err) {
+    res.status(500).json(err);
+  }
+ });
 
+ 
 router.get('/activities', (req, res) => {
   // pull in the activity data here
   
     res.render('activity');
   });
-  
 
+  // signup route
+router.get('/signup', (req, res) => {
+
+    
+      res.render('signup');
+  });
+  
+  // after login page route
+  router.get('/afterLogin', (req, res) => {
+  
+    
+      res.render('afterLogin');
+  });
+  
+  router.get('/logout', (req, res) => {
+
+    res.render('landingpage');
+  })
 
   router.get('/journal', async (req, res) => {
     try{
@@ -157,7 +186,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', {hidden: 'main'});
 });
 
 module.exports = router;
