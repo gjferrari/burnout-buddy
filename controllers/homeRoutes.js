@@ -186,7 +186,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login', {hidden: 'main'});
+  res.render('login');
 });
 
 module.exports = router;
