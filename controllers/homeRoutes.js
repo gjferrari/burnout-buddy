@@ -1,142 +1,131 @@
-const router = require('express').Router();
-const { Category, Product, User, Feeling, Questions } = require('../models');
+const router = require("express").Router();
+const { Category, Product, User, Feeling, Questions } = require("../models");
 
-
-
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/home'); // 
+    res.redirect("/home"); //
   }
 
-  res.render('landingpage');
+  res.render("landingpage");
 });
 
 // activity page
-router.get('/activity', async (req, res) => {
+router.get("/activity", async (req, res) => {
   try {
     const activityData = await Category.findAll({
       include: [
         {
-          model: Product
-         },
+          model: Product,
+        },
       ],
     });
 
-    const activity = activityData.map((activity) => activity.get({plain: true}));
-    console.log(activity)
-    res.render('activity', {
-      activity
+    const activity = activityData.map((activity) =>
+      activity.get({ plain: true })
+    );
+    console.log(activity);
+    res.render("activity", {
+      activity,
     });
-    
   } catch (err) {
     res.status(500).json(err);
   }
- });
+});
 
-
-router.get('/quiz', async (req, res) => {
+router.get("/quiz", async (req, res) => {
   try {
-    const questionData = await Questions.findAll({
-      
-    });
+    const questionData = await Questions.findAll({});
 
-    const question = questionData.map((question) => question.get({plain: true}));
-    console.log(question)
-    res.render('quiz', {
-      question
+    const question = questionData.map((question) =>
+      question.get({ plain: true })
+    );
+    console.log(question);
+    res.render("quiz", {
+      question,
     });
-    
   } catch (err) {
     res.status(500).json(err);
   }
- });
+});
 
- 
-router.get('/activities', (req, res) => {
+router.get("/activities", (req, res) => {
   // pull in the activity data here
-  
-    res.render('activity');
-  });
 
-  // signup route
-router.get('/signup', (req, res) => {
+  res.render("activity");
+});
 
-    
-      res.render('signup');
-  });
-  
-  // after login page route
-  router.get('/afterLogin', (req, res) => {
-  
-    
-      res.render('afterLogin');
-  });
-  
-  router.get('/logout', (req, res) => {
+// signup route
+router.get("/signup", (req, res) => {
+  res.render("signup");
+});
 
-    res.render('landingpage');
-  })
+// after login page route
+router.get("/afterLogin", (req, res) => {
+  res.render("afterLogin");
+});
 
-  router.get('/journal', async (req, res) => {
-    try{
-      const userData = await Feeling.findAll({
-        include: [
-          {
-            model: User,
-            attributes: ['name'],
-          },
-        ],
-      });
-      // Serialize data so the template can read it
-      const users = userData.map((user) => user.get({ plain: true }));
-      // Pass serialized data and session flag into template
-      res.render('journal', {
-        users,
-        logged_in: req.session.logged_in
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
+router.get("/logout", (req, res) => {
+  res.render("landingpage");
+});
+
+router.get("/journal", async (req, res) => {
+  try {
+    const userData = await Feeling.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+      ],
     });
-
-  router.get('/home', (req, res) => {
-    // pull in the logged in data here
-    
-      res.render('homepage', {
-        logged_in: req.session.logged_in 
-      });
+    // Serialize data so the template can read it
+    const users = userData.map((user) => user.get({ plain: true }));
+    // Pass serialized data and session flag into template
+    res.render("journal", {
+      users,
+      logged_in: req.session.logged_in,
     });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
+router.get("/home", (req, res) => {
+  // pull in the logged in data here
+
+  res.render("homepage", {
+    logged_in: req.session.logged_in,
+  });
+});
 
 // testing timer page
-router.get('/test', (req, res) => {
+router.get("/test", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/profile'); // change this
+    res.redirect("/profile"); // change this
     return;
-
   }
 });
 
 // timer page route
-router.get('/timer', (req, res) => {
-  res.render('timer');
+router.get("/timer", (req, res) => {
+  res.render("timer");
 });
 
 // finished activity page route
-router.get('/finishedactivity', (req, res) => {
-  res.render('finishedactivity')
-})
+router.get("/finishedactivity", (req, res) => {
+  res.render("finishedactivity");
+});
 
 // time quiz page route
-router.get('/timeQuiz', (req, res) => {
-  res.render('timeQuiz')
-})
+router.get("/timeQuiz", (req, res) => {
+  res.render("timeQuiz");
+});
 
 // GET one category
-router.get('/category/:id', async (req, res) => {
+router.get("/category/:id", async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   if (!req.session.loggedIn) {
-    res.redirect('/login');
+    res.redirect("/login");
   } else {
     // If the user is logged in, allow them to view the gallery
     try {
@@ -145,14 +134,14 @@ router.get('/category/:id', async (req, res) => {
           {
             model: Product,
             attributes: [
-                // todo: need attributes for product
-              '',
+              // todo: need attributes for product
+              "",
             ],
           },
         ],
       });
       const category = dbCategoryData.get({ plain: true });
-      res.render('category', { category, loggedIn: req.session.loggedIn });
+      res.render("category", { category, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -161,10 +150,10 @@ router.get('/category/:id', async (req, res) => {
 });
 
 // GET one product
-router.get('/product/:id', async (req, res) => {
+router.get("/product/:id", async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   if (!req.session.loggedIn) {
-    res.redirect('/login');
+    res.redirect("/login");
   } else {
     // If the user is logged in, allow them to view the product
     try {
@@ -172,7 +161,7 @@ router.get('/product/:id', async (req, res) => {
 
       const product = dbProductData.get({ plain: true });
 
-      res.render('product', { product, loggedIn: req.session.loggedIn });
+      res.render("product", { product, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -180,15 +169,15 @@ router.get('/product/:id', async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;
 
-
+//for clean up more get/login to userRoutes
