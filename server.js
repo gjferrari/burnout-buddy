@@ -4,8 +4,10 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
-
+var hbss = require('handlebars');
+var helperss = require('handlebars-helpers')();
 const sequelize = require('./config/connection');
+const handlebarsDateformat = require('handlebars-dateformat');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -34,6 +36,8 @@ app.use(session(sess));
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+hbss.registerHelper('dateFormat', require('handlebars-dateformat'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
