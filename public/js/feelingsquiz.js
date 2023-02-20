@@ -42,10 +42,11 @@ const feelingQuizHandler = async (event) => {
     // const name = document.querySelector('#name-signup').value.trim();
     var element = event.target
     if(element.matches(".btn")){
-    var name = element.textcontent
+    var name = element.textContent
+    console.log(name)
     
 // //           const name = element.textContent
-    document.location.replace('/home/' & name);
+    // document.location.replace('/home/' & name);
 }
     if (name) {
       const response = await fetch('/api/quiz', {
@@ -65,4 +66,4 @@ const feelingQuizHandler = async (event) => {
 
   document
     .querySelector('.feeling-form')
-    .addEventListener('submit', feelingQuizHandler);
+    .addEventListener('click', feelingQuizHandler);

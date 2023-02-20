@@ -15,8 +15,9 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">{{Feeling}}</h5>
-        <p class="card-text">On {{date_created}} {{user.name}} was feeling {{name}}.</p>
+        <p class="card-text">On {{moment date_created format="MM-DD-YYYY"}} {{user.name}} was feeling {{name}}.</p>
         <a href="/quiz" class="btn btn-primary">Re-take Quiz</a>
       </div>
     </div>
   </div>
+</div>

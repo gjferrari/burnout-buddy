@@ -34,7 +34,10 @@ router.get("/:id", (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const feelingData = await Feeling.create(req.body);
+    const feelingData = await Feeling.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
 
     req.session.save(() => {
       // req.session.user_id = user_id;
